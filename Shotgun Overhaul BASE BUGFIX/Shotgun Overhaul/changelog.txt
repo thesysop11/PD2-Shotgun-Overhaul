@@ -1,0 +1,516 @@
+--v2--
+
+/// General \\\
+
+Recoil will no longer automatically recenter after firing stops
+
+Recoil no longer has a vertical cap
+
+/// Shotguns \\\
+
+Fixed a crash when using the Joceline online
+
+Fixed the akimbo Goliaths having the wrong stability
+
+High-damage hits will no longer kill through Medic heals
+
+Increased recoil across all shotguns, including adding some new recoil patterns
+
+Aiming will now reduce all shotgun recoil by 20%
+
+Improved penetration formula when firing ammo with multiple pellets
+
+Rebalanced total ammo across all shotguns. In general ammo has been lowered to make up for better sustainability
+
+Damage falloff is now linear
+
+Pellet distribution tweaks:
+-Now goes out to 2 standard devations instead of 3. This removes the "flier" zone where there was an ~4% chance
+ for a pellet to fly massively off course
+-Fliers will now cap at the edges of the spread cone instead of rerolling
+
+Tweaked damage categories:
+-1152 -> 576 (double barrel)
+-774 -> 468 (strong manual action)
+-576 -> 387 (manual action)
+-333 added (weak manual action)
+-384 -> 288 (semi-auto)
+-270 -> 261 (full-auto)
+-234 and 216 added (weak full-auto)
+
+Tweaked fire rate categories:
+-360 added (fast semi-auto)
+-400 -> 300 (semi-auto)
+-350 -> 240 (slow semi-auto)
+-140 -> 120 (fast manual action)
+-120 -> 105 (manual action)
+-110 -> 90 (slow manual action)
+
+Reinfeld 880
+-Magazine: 7 -> 5
+
+Reinfeld 88
+-Changed rate of fire category to fast manual action
+-Changed damage category to manual action
+
+Raven
+-Changed damage category to weak manual action
+
+Mosconi 12G Tactical
+-Changed damage category to weak manual action
+
+(Akimbo) Judge
+-Changed damage category to semi-auto
+-Changed rate of fire category to fast semi-auto
+
+Locomotive 12G
+-Changed damage category to strong manual action
+-Magazine: 5 -> 2
+-Range: Mid -> Far
+
+GSPS 12G
+-Changed damage category to manual action
+-Changed rate of fire category to manual action
+-Magazine: 5 -> 4
+-Range: Mid -> Far
+
+Street Sweeper
+-Changed rate of fire category to slow semi-auto
+-Reverted reload speed buff
+
+/// Attachments \\\
+
+CE Extender (12G Tactical)
+-Magazine: +1 -> +2
+
+Short Barrel (Raven)
+-Magazine: 0 -> -4
+
+Extended Magazine (Predator)
+-Magazine: +1 -> +2
+	
+/// Ammo \\\
+
+Falloff range multipliers now match effective range multipliers (was previously half)
+
+00 Buckshot (default ammo type)
+-Reduced spread cone angle: 4.8° -> 1.6° (standard deviation: 0.8° -> 0.4°)
+	
+000 Buckshot
+-No longer tightens spread, reduces range, or increases damage
+-Now allows penetrating through enemies and walls
+
+Slug
+-Damage multiplier: 0.5x -> Drops damage category by 1
+
+Dragon's Breath
+-Spread multiplier: 2x -> 2.5x
+-Damage multiplier: 0.25x -> Drops damage category by 2
+-Spread pattern tweaked to more reliably land wider hits
+-Removed ability to penetrate through enemies
+-Fixed an issue where only a fraction of on-hit damage was dealt if the shot hadn't penetrated yet
+
+/// Shotgunner \\\
+
+Clay Shooter
+-Aced aim bonus: 40% -> 20%
+
+Steady Hand
+-Aced version now gives the ability to hip-fire shotguns while sprinting
+
+Modified Choke
+-Basic now doubles damage falloff range when aiming
+-Aced version now reduces spread by 33% when aiming
+
+Spray and Pray
+-Basic version now grants one extra base magazine's worth of total ammo
+-Aced version now gives 50% increased reload speed
+
+Rage
+-Basic now gives 15% damage reduction for 10 seconds if three or more enemies are within 18m (similar to Underdog aced)
+-Aced now gives panic from the previous basic
+-Fixed panic activating when getting a kill with a melee weapon while holding a shotgun
+
+--v1.0.2--
+
+/// General \\\
+
+-Fixed auto fire sound for IZHMA and Grimms
+
+-The free version of 000 buckshot now matches the Gage Shotgun Pack version
+
+--v1.0.1--
+
+/// General \\\
+
+-Fixed multiple issues related to semi-auto firing
+
+--v1.0--
+
+/// Ranges \\\
+
+Minimum damage for all range classes: 0.5x
+
+Near: 10m - 15m
+
+Mid: 15m - 22.5m
+
+Far: 20m - 30m
+
+Very Far: 25m - 37.5m
+
+/// General \\\
+
+-Changed semi-auto fire to be more forgiving. This will help low fire rate weapons feel significantly better to use.
+
+/// Primary Shotguns \\\
+
+Predator 12G
+-Damage: 55 -> 396 (44 x 9)
+-Total Ammo: 66 -> 48
+-Rate of Fire: 300 -> 350
+-Accuracy: 28 -> 76
+-Stability: 44 -> 36
+-Optimal Range: Mid
+-Ammo pickup: [3.3, 4.95] -> [1.5, 1.86]
+
+Breaker 12G
+-Damage: 155 -> 774 (86 x 9)
+-Magazine: 7 -> 5
+-Total Ammo: 21 -> 30
+-Rate of Fire: 80 -> 100
+-Accuracy: 48 -> 88
+-Stability: 28 -> 20
+-Optimal Range: Far
+-Ammo Pickup: [0.2, 0.735] -> [0.75, 1.12]
+
+Reinfeld 880
+-Damage: 90 -> 576 (64 x 9)
+-Magazine: 8 -> 7
+-Rate of Fire: 104 -> 120
+-Accuracy: 40 -> 76
+-Stability: 32 -> 28
+-Optimal Range: Far
+-Ammo Pickup: [0.42, 1.47] -> [0.75, 1.12]
+
+M1014
+-Damage: 55 -> 396 (44 x 9)
+-Magazine: 8 -> 5
+-Rate of Fire: 429 -> 400
+-Total Ammo: 64 -> 55
+-Accuracy: 28 -> 52
+-Stability: 44 -> 40
+-Optimal Range: Near
+-Ammo Pickup: [3.2, 4.8] -> [1.5, 1.86]
+
+Raven
+-Damage: 90 -> 576 (64 x 9)
+-Rate of Fire: 104 -> 120
+-Accuracy: 44 -> 72
+-Stability: 44 -> 32
+-Optimal Range: Mid
+-Ammo Pickup: [0.42, 1.47] -> [0.75, 1.12]
+
+IZHMA 12G
+-Damage: 42 -> 270 (30 x 9)
+-Magazine: 7 -> 8
+-Total Ammo: 70 -> 80
+-Rate of Fire: 333 -> 600
+-Accuracy: 28 -> 52
+-Stability: 44 -> 28
+-Optimal Range: Near
+-Ammo Pickup: [3.5, 5.25] -> [1.5, 2.23]
+
+Mosconi 12G
+-Damage: 155 -> 1152 (128 x 9)
+-Rate of Fire: 500 -> 1200
+-Accuracy: 60 -> 88
+-Stability: 36 -> 20
+-Reload Time: 2.5s -> 2.2s
+-Optimal Range: Far
+-Ammo Pickup: [0.32, 1.12] -> [0.75, 1.12]
+
+Joceline O/U 12G
+-Damage: 155 -> 1152 (128 x 9)
+-Rate of Fire: 500 -> 400
+-Accuracy: 60 -> 96
+-Reload Time: 2.5s (2.7s empty) -> 2.4s
+-Optimal Range: Very Far
+-Ammo Pickup: [0.28, 0.98] -> [0.75, 1.12]
+
+Steakout 12G
+-Damage: 42 -> 270 (30 x 9)
+-Accuracy: 28 -> 64
+-Stability: 44 -> 36
+-Optimal Range: Near
+-Ammo Pickup: [3.6, 5.4] -> [1.5, 2.23]
+
+Mosconi 12G Tactical
+-Damage: 110 -> 576 (64 x 9)
+-Magazine: 7 -> 6
+-Rate of Fire: 150 -> 140
+-Accuracy: 36 -> 68
+-Stability: 32 -> 36
+-Optimal Range: Mid
+-Ammo Pickup: [1.26, 1.68] -> [0.75, 1.12]
+
+Reinfeld 88
+-Damage: 120 -> 774 (86 x 9)
+-Magazine: 7 -> 5
+-Total Ammo: 35 -> 30
+-Rate of Fire: 120 -> 110
+-Accuracy: 40 -> 76
+-Stability: 36 -> 28
+-Optimal Range: Mid
+-Ammo Pickup: [1.05, 1.4] -> [0.75, 1.12]
+
+/// Secondary Shotguns \\\
+
+Locomotive 12G
+-Damage: 90 -> 576 (64 x 9)
+-Magazine: 6 -> 5
+-Rate of Fire: 160 -> 140
+-Accuracy: 48 -> 68
+-Stability: 36 -> 24
+-Optimal Range: Mid
+-Ammo Pickup: [0.42, 1.47] -> [0.75, 1.12]
+
+GSPS 12G
+-Damage: 155 -> 774 (86 x 9)
+-Magazine: 7 -> 5
+-Total Ammo: 28 -> 30
+-Rate of Fire: 104 -> 100
+-Accuracy: 44 -> 88
+-Stability: 52 -> 20
+-Optimal Range: Mid
+-Ammo Pickup: [0.28, 0.98] -> [0.75, 1.12]
+
+(Akimbo) Goliath 12G
+-Damage: 42 -> 396 (44 x 9)
+-Rate of Fire: 333 -> 350
+-Accuracy: 56 -> 76
+-Stability: 44 -> 36
+-Optimal Range: Mid
+-Ammo Pickup: [2.7, 4.05] -> [1.5, 1.86]
+
+(Akimbo) Grimm 12G
+-Damage: 18 -> 270 (30 x 9)
+-Magazine: 8 -> 5 (16 -> 10 for akimbo)
+-Total Ammo: 104 -> 60 (96 -> 80 for akimbo)
+-Rate of Fire: 300 -> 600
+-Accuracy: 12 -> 60
+-Stability: 48 -> 20
+-Optimal Range: Near
+-Ammo Pickup: [5.2, 7.8] -> [1.5, 2.23]
+
+Street Sweeper
+-Damage: 42 -> 396 (44 x 9)
+-Total Ammo: 72 -> 60
+-Rate of Fire: 429 -> 400
+-Accuracy: 28 -> 56
+-Stability: 44 -> 28
+-Reload Time: 8.8s -> 7.7s
+-Optimal Range: Near
+-Ammo Pickup: [3.6, 5.4] -> [1.5, 1.86]
+
+(Akimbo) Judge
+-Damage: 155 -> 576 (64 x 9)
+-Total Ammo: 35 -> 40 (40 -> 60 for akimbo)
+-Rate of Fire: 500 -> 400
+-Accuracy: 52 -> 64
+-Stability: 28 -> 32
+-Optimal Range: Near
+-Ammo Pickup: [0.18, 0.53] -> [0.75, 1.12]
+
+Claire 12G
+-Damage: 155 -> 468 (52 x 9)
+-Total Ammo: 44 -> 32
+-Rate of Fire: 500 -> 1200
+-Accuracy: 56 -> 96
+-Stability: 44 -> 20
+-Optimal Range: Far
+-Ammo Pickup: [0.22, 0.66] -> [0.75, 1.12]
+
+/// Attachments \\\
+
+Shark Teeth Nozzle
+-Damage: +2 -> 0
+-Accuracy: -8 -> -4
+-Stablity: +8 -> +12
+
+The Silent Killer Suppressor
+-Damage: -4 -> 0
+-Stability: +4 -> +8
+
+Kings Crown Compensator
+-Damage: +1 -> 0
+-Accuracy: +12 -> +8
+-Stability: 0 -> +4
+
+Shh!
+-Damage: -4 -> 0
+-Stability: +4 -> +8
+
+Donald's Horizontal Leveller
+-Damage: +2 -> 0
+-Spread width multiplier: 2.25x -> 2x
+-Spread height multiplier: 0.5x -> 0.25x
+-Also affects spread of pellets
+-No longer usable with slugs and HE
+
+Shell Rack (R880/Loco)
+-Magazine: +2 -> 0
+-Reload Time: 0 -> -0.5 (-0.4 for Loco)
+
+Extended Magazine (R880/Loco)
+-Magazine: +2 -> +1
+
+Big Brother Magazine (IZHMA)
+-Magazine: +4 -> +2
+
+Big Brother Magazine (Grimm)
+-Magazine: +4 -> +3 (+8 -> +6 for akimbo Grimm)
+
+Short Barrel (Raven)
+-Magazine: -4 -> 0
+-Accuracy: -8 -> -4
+
+Long Barrel (Raven)
+-Magazine: +4 -> 0
+
+CE Extender (12G Tactical)
+-Magazine: +4 -> +1
+
+CE Muffler (12G Tactical)
+-Accuracy: -8 -> -4
+
+Ventilated Barrel (R88)
+-Accuracy: -8 -> -4
+
+Suppressed Barrel (Steakout)
+-Damage: -2 -> 0
+
+Extended Mag (Predator)
+-Magazine: +4 -> +1
+
+Short Barrel (M1014)
+-Damage: +2 -> 0
+-Magazine: -2 -> 0
+-Accuracy: -8 -> -4
+
+Short Barrel (Goliath)
+-Accuracy: -8 -> -4
+
+Silenced Barrel (Goliath)
+-Damage: -2 -> 0
+
+Riot Barrel (GSPS)
+-Accuracy: -8 -> -4
+
+Suppressed Barrel (Street Sweeper)
+-Damage: -2 -> 0
+
+Sawn-off Barrel (Mosconi/Joceline/Claire)
+-Accuracy: -16 -> -12
+-Stability: -16 -> -4
+
+No Stock (Mosconi/Joceline/Claire)
+-Accuracy: -16 -> -8
+-Stability: -16 -> -8
+
+Auto Fire
+-Damage: +1 -> 0
+
+Single Fire
+-Accuracy: +4 -> +8
+-Stability: -8 -> -4
+
+/// Ammo \\\
+
+00 Buckshot (default ammo type)
+-Pellets: 12 -> 9
+-Spread Cone Angle: 4.8°
+
+000 Buckshot
+-Pellets: 12 -> 8
+-Spread Cone Angle: 4.32°
+-Damage: +15 -> 1.2x
+-Stability: 0 -> -4
+-Falloff Start Distance Multiplier: 0.8x
+-Falloff Range Multiplier: 0.9x
+
+Flechette
+-Pellets: 12 -> 15
+-Spread Cone Angle: 6°
+-Damage: -3 -> 0
+-Accuracy: +8 -> 0
+-Falloff Start Distance Multiplier: 2x
+
+HE
+-Damage: +3 -> 0
+-Spread Cone Angle: 0°
+-Ammo reduction: 10% -> 0
+-Accuracy: -12 -> +8
+-Stability: 0 -> -8
+-Falloff Start Distance Multiplier: 3x
+-Falloff Range Multiplier: 1.5x
+
+Slug
+-Damage: +15 -> 0.5x
+-Spread Cone Angle: 0°
+-Ammo reduction: 15% -> 0
+-Accuracy: +8 -> +16
+-Stability: 0 -> -8
+-Falloff Start Distance Multiplier: 4x
+-Falloff Range Multiplier: 2x
+
+Dragon's Breath
+-Pellets: 12 -> 18
+-Damage: -6 -> 0.25x
+-Spread Cone Angle: 9.6°
+-Ammo reduction: 10% -> 0
+-Accuracy: -4 -> 0
+-Falloff Start Distance Multiplier: 0.5x
+-Falloff Range Multiplier: 0.75x
+-Now penetrates through enemies
+
+/// Shotgunner \\\
+
+The Shotgunner skill tree has been replaced with a new one that focuses more on utility as opposed to damage. This allows shotguns
+to be balanced for viability without a huge point investment (though they'll still be better if you decide to).
+
+T1 - Dexterity
+-Basic
+	-Swap time with shotguns reduced by 33%
+-Aced
+	-Sprint and reload with shotguns
+	
+T2 - Clay Shooter
+-Basic
+	-+8 accuracy with shotguns
+-Aced
+	-40% to accuracy bonus when aiming shotguns. 100% increased ADS speed with shotguns
+	
+T2 - Steady Hand
+-Basic
+	-+8 stability with shotguns
+-Aced
+	-50% faster reload speed for shotguns
+	
+T3 - Modified Choke
+-Basic
+	-50% increased effective range when aiming with shotguns
+-Aced
+	-Damage falloff penalty reduced by half when aiming with shotguns
+	
+T3 - Spray and Pray
+-Basic
+	-Sprint and hipfire with shotguns
+-Aced
+	-Magazine-fed shotguns double their base magazine size
+	
+T4 - Rage
+-Basic
+	-Killing an enemy within 18m with a shotgun causes nearby enemies to panic. Cannot occur more than once every 5 seconds
+-Aced
+	-Killing an enemy within 18m with a shotgun gives a 20% movement speed bonus for 3 seconds
