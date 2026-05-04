@@ -1,0 +1,84 @@
+{
+	"name" : "Shotgun Overhaul",
+	"description" : "Adds realistic shotgun mechanics and rebalances them to fit better with other weapon types.",
+	"author" : "Boondorl"
+	"blt_version" : 2,	
+	"color" : "1 1 1",
+	"version" : "2",
+	"priority" : 100,
+	"hooks" : [
+		{
+			"hook_id" : "lib/tweak_data/weapontweakdata"
+			"script_path" : "Hooks/shotguns.lua"
+		},
+		{
+			"hook_id" : "lib/units/weapons/shotgun/shotgunbase"
+			"script_path" : "Hooks/shotgunbase.lua"
+		},
+		{
+			"hook_id" : "lib/tweak_data/weaponfactorytweakdata"
+			"script_path" : "Hooks/shotgun-mods.lua"
+		},
+		{ 	"hook_id" : "lib/tweak_data/upgradestweakdata",
+			"script_path" : "Hooks/skills.lua"
+		},
+		{ 	"hook_id" : "lib/tweak_data/skilltreetweakdata",
+			"script_path" : "Hooks/skilltree.lua"
+		},
+		{ 	"hook_id" : "lib/managers/localizationmanager",
+			"script_path" : "loc/english.lua"
+		},
+		{
+			"hook_id" : "lib/units/weapons/akimboshotgunbase"
+			"script_path" : "Hooks/akimboshotgunbase.lua"
+		},
+		{
+			"hook_id" : "lib/units/weapons/akimboshotgunbase"
+			"script_path" : "Hooks/akimboshotgunbase.lua"
+		},
+		{
+			"hook_id" : "lib/managers/playermanager"
+			"script_path" : "Hooks/onkill.lua"
+		},
+		{
+			"hook_id" : "lib/utils/inventorydescription"
+			"script_path" : "Hooks/inventoryguifix.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playerbipod"
+			"script_path" : "Hooks/player/playerbipod.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playerbleedout"
+			"script_path" : "Hooks/player/playerbleedout.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playercarry"
+			"script_path" : "Hooks/player/playercarry.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playerdriving"
+			"script_path" : "Hooks/player/playerdriving.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playerparachuting"
+			"script_path" : "Hooks/player/playerparachuting.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playerstandard"
+			"script_path" : "Hooks/player/playerstandard.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/states/playertased"
+			"script_path" : "Hooks/player/playertased.lua"
+		},
+		{   
+			"hook_id" : "lib/units/weapons/raycastweaponbase",
+			"script_path" : "Hooks/soundfix.lua"
+		},
+		{   
+			"hook_id" : "lib/units/cameras/fpcameraplayerbase",
+			"script_path" : "Hooks/recoil.lua"
+		}
+	]
+}
